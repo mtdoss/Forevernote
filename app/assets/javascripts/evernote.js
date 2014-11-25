@@ -5,7 +5,6 @@ window.Evernote = {
   Routers: {},
   initialize: function() {
     new Evernote.Routers.Router({ rootEl: "#main" });
-
     Backbone.history.start();
   }
 };
