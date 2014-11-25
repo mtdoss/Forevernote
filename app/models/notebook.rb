@@ -3,4 +3,8 @@ class Notebook < ActiveRecord::Base
 
   belongs_to :user
 
+
+  def is_member?(user)
+    user.id == self.user_id
+  end
 end
