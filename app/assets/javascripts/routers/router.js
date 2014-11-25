@@ -8,13 +8,13 @@ Evernote.Routers.Router = Backbone.Router.extend({
   },
 
   notebooksIndex: function() {
-    // var notebooks = Evernote.Collections.notebooks;
-//     notebooks.fetch();
-//     var indexView = new Evernote.Views.NotebooksIndex({
-//       collection: notebooks
-//     });
-//
-//this._swapView(indexView);
+    var notebooks = Evernote.Collections.notebooks;
+    notebooks.fetch();
+    var indexView = new Evernote.Views.NotebooksIndex({
+      collection: notebooks
+    });
+
+    this._swapView(indexView);
   },
 
   _swapView: function(view) {
