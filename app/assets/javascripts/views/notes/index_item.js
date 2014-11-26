@@ -1,9 +1,8 @@
 Evernote.Views.NotesIndexItem = Backbone.View.extend({
   template: JST["notes/index_item"],
-  // className: 'note-index-item',
 
   events: {
-    "click": "doStuff"
+    "click": "addShow"
   },
 
   render: function() {
@@ -14,7 +13,7 @@ Evernote.Views.NotesIndexItem = Backbone.View.extend({
     return this;
   },
 
-  doStuff: function() {
+  addShow: function() {
     console.log("Doing stuff to a note index item!");
   }
 });
