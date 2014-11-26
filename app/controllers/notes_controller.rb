@@ -1,6 +1,6 @@
 module Api
   class NotesController < ApiController
-    #before_action #require_notebook_member!
+    # before_action #require_notebook_member!
 
     def create
       @note = current_notebook.notes.new(note_params)

@@ -5,6 +5,7 @@ Evernote::Application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :notebooks, except: [:new, :edit]
+    resources :notes, only: [:create, :update, :destroy]
   end
 end
 
