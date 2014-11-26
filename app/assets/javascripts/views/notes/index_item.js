@@ -1,5 +1,9 @@
-Evernote.Views.NotesIndexItem = Backbone.View.extend({
+Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
   template: JST["notes/index_item"],
+
+  initialize: function(options) {
+    this.parent = options.parent;
+  },
 
   events: {
     "click": "addShow"
@@ -14,6 +18,11 @@ Evernote.Views.NotesIndexItem = Backbone.View.extend({
   },
 
   addShow: function() {
-    console.log("Doing stuff to a note index item!");
+    console.log("doing stuff to a note");
+    var noteShow = new Evernote.Views.NotesShow({
+      model: this.model,
+      parent: this
+    });
+    this.parent.parent.parent.addSubviewReplacement('.note-show', noteShow);
   }
 });
