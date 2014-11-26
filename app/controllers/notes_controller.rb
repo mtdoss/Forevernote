@@ -21,7 +21,6 @@ module Api
       end
     end
 
-
     private
 
     def current_notebook
