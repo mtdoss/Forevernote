@@ -20,9 +20,15 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   },
 
   addNotebookShow: function(event) {
+    if (this._currentView) {
+      this._currentView.remove();
+    }
+
     var notebookShow = new Evernote.Views.NotebooksShow({
       model: this.model
     });
+    this._currentView = notebookShow
+    // this.$el.find('.notebook-show').html(notebookShow.render().$el)
     this.parent.addSubviewReplacement('.notebook-show', notebookShow);
     console.log(this.parent);
     console.log(this.model);
