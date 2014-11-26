@@ -5,6 +5,7 @@ Backbone.CompositeView = Backbone.View.extend({
   },
 
   //bad
+  //TODO: fix this
   addSubviewReplacement: function (selector, subview) {
     this.subviews(selector).push(subview);
     this.replaceSubview(selector, subview.render());
@@ -47,6 +48,7 @@ Backbone.CompositeView = Backbone.View.extend({
   },
 
   //bad
+  //TODO: fix this
   replaceSubview: function (selector, subview) {
     this.$(selector).html(subview.$el);
 
