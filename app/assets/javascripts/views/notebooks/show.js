@@ -7,5 +7,14 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     });
     this.$el.html(content);
     return this;
-  }
+  },
+
+  addNoteIndexItem: function(indexItem) {
+    var noteIndexItem = new Evernote.Views.NotesIndexItem({
+      model: indexItem
+    });
+
+    this.addSubview('note-index-item', noteIndexItem);
+  },
+
 })

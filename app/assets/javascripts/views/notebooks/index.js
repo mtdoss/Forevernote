@@ -37,21 +37,11 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
 //     }.bind(this));
 //}
 
-  addNoteIndexItem: function(indexItem) {
-    var noteIndexItem = new Evernote.Views.NotesIndexItem({
-      model: indexItem
-    });
-
-    this.addSubview('note-index-item', noteIndexItem);
-  },
-
-  // showNotebook: function(event) {
-//     event.preventDefault(); //i don't think there's anything to prevent here
-//     // debugger
-//     var notebookShow = new Evernote.Views.NotebooksShow({
-//       model: //event's current target
-//     });
-//
-//     this.addSubview('note-index-item', notebookShow);
-//   }
+  // addNoteIndexItem: function(indexItem) {
+  //   var noteIndexItem = new Evernote.Views.NotesIndexItem({
+  //     model: indexItem
+  //   });
+  //
+  //   this.addSubview('note-index-item', noteIndexItem);
+  // },
 })
