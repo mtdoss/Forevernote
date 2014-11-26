@@ -8,6 +8,7 @@ Evernote.Routers.Router = Backbone.Router.extend({
     "/notebooks/:id": "notebooksShow"
   },
 
+  //I don't think I actually want this
   notebooksShow: function(id) {
     var notebook = Evernote.Collections.notebooks.getOrFetch(id);
     var showView = new Evernote.Views.NotebooksShow({

@@ -1,15 +1,12 @@
 Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   template: JST["notebooks/index"],
 
-  events: {
-    // "click .notebook-index-item": "showNotebook"
-  },
-
   initialize: function() {
     //first listenTo causes weird behavior where fetching in console causes
     //multiple show pages to appear - does that imply something's wrong? probably
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, 'add', this.addIndexItem);
+
     // is filled yet?
     // this.addAllIndexItems();
     // this.listenTo(this.model.notes(), "add", this.addNoteIndexItem);
@@ -38,12 +35,4 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
 //       this.addIndexItem(notebook);
 //     }.bind(this));
 //}
-
-  // addNoteIndexItem: function(indexItem) {
-  //   var noteIndexItem = new Evernote.Views.NotesIndexItem({
-  //     model: indexItem
-  //   });
-  //
-  //   this.addSubview('.note-index-item', noteIndexItem);
-  // },
 })
