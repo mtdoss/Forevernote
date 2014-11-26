@@ -6,6 +6,7 @@
 //
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // compiled file.
+// for triggerhappy, do b/w backbone and evernote - backbone.TriggerHappy
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
@@ -13,22 +14,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.serializejson
-//= require underscore
-//= require backbone
 //= require bootstrap
 //= require underscore
 //= require backbone
 //= require evernote
 //= require_tree ../templates
-//= require_tree ./models
-//= require_tree ./collections
-//= require_tree ./views
-//= require_tree ./routers
-//= require_tree ../templates
-//= require underscore
-//= require backbone
-//= require evernote
-//= require_tree ../templates
+//= require_tree ./utils
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
