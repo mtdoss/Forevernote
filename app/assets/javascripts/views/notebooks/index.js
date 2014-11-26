@@ -1,6 +1,10 @@
 Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   template: JST["notebooks/index"],
 
+  events: {
+    // "click .notebook-index-item": "showNotebook"
+  },
+
   initialize: function() {
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, 'add', this.addIndexItem);
@@ -20,7 +24,8 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
 
   addIndexItem: function(indexItem) {
     var indexItem = new Evernote.Views.NotebooksIndexItem({
-      model: indexItem
+      model: indexItem,
+      parent: this
     });
 
     this.addSubview('.notebook-list', indexItem);
@@ -32,11 +37,21 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
 //     }.bind(this));
 //}
 
-    addNoteIndexItem: function(indexItem) {
-      var noteIndexItem = new Evernote.Views.NotesIndexItem({
-        model: indexItem
-      });
+  addNoteIndexItem: function(indexItem) {
+    var noteIndexItem = new Evernote.Views.NotesIndexItem({
+      model: indexItem
+    });
 
-      this.addSubview('note-index-item', noteIndexItem);
-    }
+    this.addSubview('note-index-item', noteIndexItem);
+  },
+
+  // showNotebook: function(event) {
+//     event.preventDefault(); //i don't think there's anything to prevent here
+//     // debugger
+//     var notebookShow = new Evernote.Views.NotebooksShow({
+//       model: //event's current target
+//     });
+//
+//     this.addSubview('note-index-item', notebookShow);
+//   }
 })

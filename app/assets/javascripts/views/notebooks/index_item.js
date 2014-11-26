@@ -1,5 +1,10 @@
 Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   template: JST["notebooks/index_item"],
+  className: 'notebook-index-item',
+
+  initialize: function(options) {
+    this.parent = options.parent
+  },
 
   events: {
     "click": "doStuff"
@@ -15,6 +20,13 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   },
 
   doStuff: function(event) {
-    // console.log("hi");
+    var notebookShow = new Evernote.Views.NotebooksShow({
+      model: this.model
+    });
+
+    this.parent.addSubview('note-index-item', notebookShow);
+
   }
 })
+
+// this.parent.addSubview('...', ''.., )

@@ -1,5 +1,6 @@
 Evernote.Views.NotesIndexItem = Backbone.View.extend({
   template: JST["notes/index_item"],
+
   events: {
     "click": "doStuff"
   },
