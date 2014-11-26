@@ -6,6 +6,8 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   },
 
   initialize: function() {
+    //first listenTo causes weird behavior where fetching in console causes
+    //multiple show pages to appear - does that imply something's wrong? probably
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, 'add', this.addIndexItem);
     // is filled yet?
