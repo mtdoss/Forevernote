@@ -61,10 +61,16 @@ table {
 @import "bootstrap";
 @import "font-awesome";
 
+.main {
+
+}
+
 .notebook-list {
   float: left;
+  width: 20%;
 }
 
 .notebook-show {
-  float: left;
+  display: inline-block;
+  width: 40%;
 }

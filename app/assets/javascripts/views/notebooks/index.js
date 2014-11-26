@@ -35,4 +35,4 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
 //       this.addIndexItem(notebook);
 //     }.bind(this));
 //}
-})
+});
