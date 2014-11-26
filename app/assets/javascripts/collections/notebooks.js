@@ -11,6 +11,8 @@ Evernote.Collections.Notebooks = Backbone.Collection.extend({
       notebook.fetch({
         success: function() { notebooks.add(notebook) }
       });
+    } else {
+      notebook.fetch();
     }
     return notebook;
   }

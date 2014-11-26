@@ -23,7 +23,7 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
     if (this._currentView) {
       this._currentView.remove();
     }
-
+    this.model.fetch();
     var notebookShow = new Evernote.Views.NotebooksShow({
       model: this.model
     });

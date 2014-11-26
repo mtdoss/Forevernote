@@ -6,7 +6,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     this.listenTo(this.model.notes(), "add", this.addNoteIndexItem)
     this.model.notes().each(this.addNoteIndexItem.bind(this));
     // this.model.collection.getOrFetch(this.model.id)
-    this.model.fetch();
+    // this.model.fetch();
   },
 
   render: function() {

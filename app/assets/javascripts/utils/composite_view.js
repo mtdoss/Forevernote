@@ -5,8 +5,11 @@ Backbone.CompositeView = Backbone.View.extend({
   },
 
   //bad
-  //TODO: fix this
+  //TODO: fix this, and also figure out why it was working earlier
   addSubviewReplacement: function (selector, subview) {
+    this.subviews(selector).forEach(function( subview2 ){
+      this.removeSubview(selector, subview2)
+    }.bind(this))
     this.subviews(selector).push(subview);
     this.replaceSubview(selector, subview.render());
   },

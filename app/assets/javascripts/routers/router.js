@@ -5,7 +5,7 @@ Evernote.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "notebooksIndex",
-    "/notebooks/:id": "notebooksShow"
+    "notebooks/:id": "notebooksShow"
   },
 
   //I don't think I actually want this
