@@ -23,7 +23,9 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
     var notebookShow = new Evernote.Views.NotebooksShow({
       model: this.model
     });
-    this.parent.addSubview('note-index-item', notebookShow);
+    this.parent.addSubview('.notebook-show', notebookShow);
+    console.log(this.parent);
+    console.log(this.model);
   }
 })
 
