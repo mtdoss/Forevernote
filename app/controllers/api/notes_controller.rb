@@ -21,6 +21,11 @@ module Api
       end
     end
 
+    def show
+      @note = Note.find(params[:id])
+      render :show
+    end
+
     private
 
     def current_notebook

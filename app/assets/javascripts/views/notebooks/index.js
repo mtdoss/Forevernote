@@ -5,7 +5,9 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, 'add', this.addIndexItem);
     // is filled yet?
-    this.addAllIndexItems();
+    // this.addAllIndexItems();
+    // this.listenTo(this.model.notes(), "add", this.addNoteIndexItem);
+    // this.model.notes().each(this.addNoteIndexItem.bind(this));
   },
 
   render: function(){
@@ -24,9 +26,17 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     this.addSubview('.notebook-list', indexItem);
   },
 
-  addAllIndexItems: function() {
-    this.collection.each(function (notebook) {
-      this.addIndexItem(notebook);
-    }.bind(this));
-  }
+  // addAllIndexItems: function() {
+//     this.collection.each(function (notebook) {
+//       this.addIndexItem(notebook);
+//     }.bind(this));
+//}
+
+    addNoteIndexItem: function(indexItem) {
+      var noteIndexItem = new Evernote.Views.NotesIndexItem({
+        model: indexItem
+      });
+
+      this.addSubview('note-index-item', noteIndexItem);
+    }
 })

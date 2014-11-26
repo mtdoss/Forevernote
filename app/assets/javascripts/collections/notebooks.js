@@ -15,4 +15,5 @@ Evernote.Collections.Notebooks = Backbone.Collection.extend({
     return notebook;
   }
 });
+
 Evernote.Collections.notebooks = new Evernote.Collections.Notebooks();
