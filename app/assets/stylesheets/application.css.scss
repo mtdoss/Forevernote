@@ -61,13 +61,37 @@ table {
 @import "bootstrap";
 @import "font-awesome";
 
-.main {
-
+#main {
+  background-color: #eaedef;
 }
 
 .notebook-list {
+
 }
 
 .notebook-show {
 
 }
+
+#logo-search-new-wrapper {
+  position: absolute;
+  height: 51px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+#logo {
+
+}
+
+.main-content {
+  background: orange;
+}
+//.note-show {
+//  min-height: 500px;
+//  background: white;
+//}

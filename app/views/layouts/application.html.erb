@@ -13,10 +13,10 @@
 	<% end %>
 <% end %>
 
-<% if current_user %>
-	<%= current_user.email %>
-	<%= button_to "Sign Out", session_url, method: :delete %>
-<% end %>
+<!-- <% if current_user %>
+  <%= current_user.email %>
+  <%= button_to "Sign Out", session_url, method: :delete %>
+<% end %> -->
 
 
 <%= yield %>
