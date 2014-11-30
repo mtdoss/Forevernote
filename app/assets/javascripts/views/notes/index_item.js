@@ -1,5 +1,6 @@
 Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
   template: JST["notes/index_item"],
+  className: 'note-index-item',
 
   initialize: function(options) {
     this.parent = options.parent;
@@ -37,6 +38,6 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
     }
 
     this.parent._clickedOn = $(event.currentTarget);
-    this.parent._clickedOn.css({background: 'orange'});
+    this.parent._clickedOn.css({background: '#ecf0f3'});
   }
 });
