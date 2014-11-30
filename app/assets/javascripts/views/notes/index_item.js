@@ -24,7 +24,7 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
 
   addShow: function(event) {
     console.log("doing stuff to a note");
-    var noteShow = new Evernote.Views.NotesShow({
+    var noteShow = new Evernote.Views.NotesNew({
       model: this.model,
       parent: this
     });

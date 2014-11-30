@@ -18,6 +18,9 @@
 //= require underscore
 //= require backbone
 //= require evernote
+//= require bootstrap-markdown
+//= require markdown
+//= require to-markdown
 //= require_tree ../templates
 //= require_tree ./utils
 //= require_tree ./models

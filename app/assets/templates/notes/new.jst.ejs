@@ -1,0 +1,28 @@
+
+<div class="panel-body">
+  <form class="post-edit">
+    <div class="form-group">
+      <input type="text"
+             id="note-title"
+             name="note[title]"
+             class="form-control"
+             placeholder="Title"
+             value="<%= note.escape('title') %>">
+     </div>
+
+     <div class="form-group">
+       <textarea id="note-body"
+                 class="form-control"
+                 data-provide="markdown"
+                 name="note[body]"><%= note.escape('body') %> </textarea>
+
+    </div>
+
+    <button type="submit"
+            class="btn btn-success pull-left"
+            id="commit-edit">Save</button>
+    <button type="button"
+            class="btn btn-danger pull-right"
+            id="cancel-edit">Cancel</button>
+  </form>
+</div>
