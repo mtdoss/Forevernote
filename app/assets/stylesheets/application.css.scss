@@ -66,11 +66,11 @@ table {
 }
 
 .notebook-list {
-
+background-color: orange;
 }
 
 .notebook-show {
-
+background-color: white;
 }
 
 #logo-search-new-wrapper {
@@ -89,9 +89,16 @@ table {
 }
 
 .main-content {
-  background: orange;
+  background-color: #c9d1d7;
+  position: absolute;
+  overflow: hidden;
+  left: 0px;
+  top: 84px;
+  right: 0px;
+  bottom: 0px;
 }
-//.note-show {
-//  min-height: 500px;
-//  background: white;
-//}
+.note-show {
+ // min-height: 500px;
+ // background: white;
+ background-color: red;
+}
