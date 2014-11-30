@@ -15,12 +15,10 @@
 //= require jquery_ujs
 //= require jquery.serializejson
 //= require bootstrap
+//= require bootstrap-markdown-bundle
 //= require underscore
 //= require backbone
 //= require evernote
-//= require bootstrap-markdown
-//= require markdown
-//= require to-markdown
 //= require_tree ../templates
 //= require_tree ./utils
 //= require_tree ./models
