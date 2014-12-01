@@ -64,6 +64,7 @@ table {
 
 #main {
   background-color: #eaedef;
+  padding: 0px;
 }
 
 .notebook-list {
@@ -140,4 +141,17 @@ table {
 .notebooks-index-header {
   background-color: orange;
   display: inline-block;
+}
+
+.navbar {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-premium-wrapper {
+  min-height: 32px;
+  background-color: #2dbe60;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
 }
