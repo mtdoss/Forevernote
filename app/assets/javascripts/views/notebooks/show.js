@@ -2,6 +2,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   template: JST["notebooks/show"],
 
   initialize: function(options) {
+    debugger;
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model.notes(), "add", this.addNoteIndexItem);
     this.model.notes().each(this.addNoteIndexItem.bind(this));
@@ -39,8 +40,8 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   addNew: function(event) {
-    console.log("doing stuff to a note");
     event.preventDefault();
+    var view = this;
     var newNote = new Evernote.Models.Note({
       title: "untitled",
       notebook_id: this.model.id
@@ -55,10 +56,11 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     // notebook.create(newNote, {});
     newNote.save({}, {
       success: function() {
-        alert("saving");
+        console.log("saving");
+        // notebook.add(newNote);
+        // view.render();
       }
-    })
-    // this.render();
+    });
   }
 
 
