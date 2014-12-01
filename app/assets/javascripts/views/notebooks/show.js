@@ -46,7 +46,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     //   model: blankIndexItem,
     //   parent: this
     // });
-    debugger
+    // debugger;
     this.addNoteIndexItem(newNote);
     // this.render();
   }

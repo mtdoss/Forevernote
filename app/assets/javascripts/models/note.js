@@ -2,8 +2,13 @@ Evernote.Models.Note = Backbone.Model.extend({
 	urlRoot: "/api/notes",
 
 	teaserText: function() {
-    var content = this.attributes.body;
-    var slicedContent = content.slice(0, 80);
+    var slicedContent = "";
+    var content = "";
+    if (this.attributes.body){
+      content = this.attributes.body;
+      slicedContent = content.slice(0, 80);
+    }
+    
     if (content.length > 80) {
       return slicedContent + "...";
     } else {
