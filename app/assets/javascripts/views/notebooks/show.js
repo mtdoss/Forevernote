@@ -10,9 +10,9 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     this.parent = options.parent;
   },
 
-  events: {
-    "click .new-note": "addNew" //this won't work: no new-note here
-  },
+  // events: {
+  //   "click .new-note": "addNew" //this won't work: no new-note here
+  // },
 
   onRender: function(){
     //TODO: we ALSO NEED TO overwrite 'remove' and explicitly
@@ -41,13 +41,23 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   addNew: function(event) {
     console.log("doing stuff to a note");
     event.preventDefault();
-    var newNote = new Evernote.Models.Note({ title: "untitled" });
+    var newNote = new Evernote.Models.Note({
+      title: "untitled",
+      notebook_id: this.model.id
+    });
+    var notebook = Evernote.Collections.notebooks.get(this.model.id);
     // var newIndexItem = new Evernote.Views.NotebooksIndexItem({
     //   model: blankIndexItem,
     //   parent: this
     // });
     // debugger;
     this.addNoteIndexItem(newNote);
+    // notebook.create(newNote, {});
+    newNote.save({}, {
+      success: function() {
+        alert("saving");
+      }
+    })
     // this.render();
   }
 
