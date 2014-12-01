@@ -1,5 +1,10 @@
-Evernote.Views.NotesNew = Backbone.View.extend({
+Evernote.Views.NotesNew = Backbone.CompositeView.extend({
   template: JST["notes/new"],
+
+  initialize: function() {
+    this.attachHeader();
+    // this.listenTo(this.model, "sync", this.render);
+  },
 
   events: {
     "submit form": "submit"
@@ -12,6 +17,11 @@ Evernote.Views.NotesNew = Backbone.View.extend({
     this.$el.html(content);
 
     return this;
+  },
+
+  attachHeader: function() {
+    var headerItem = new Evernote.Views.NoteHeader();
+    this.addSubview('note-header', headerItem);
   },
 
   submit: function(event) {

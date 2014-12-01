@@ -17,7 +17,6 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
     var content = this.template({
       notebook: this.model
     });
-
     this.$el.html(content);
     return this;
   },
