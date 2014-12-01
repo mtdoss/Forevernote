@@ -14,6 +14,13 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     "click .new-note": "addNew" //this won't work: no new-note here
   },
 
+  onRender: function(){
+    //TODO: we ALSO NEED TO overwrite 'remove' and explicitly
+    //unsubscribe from this event otherwise we will have extra events firing
+    //which is bad and not subtle and ZOMBIE VIEWS!
+    $('.new-note').click(this.addNew.bind(this));
+  },
+
   render: function() {
     var content = this.template({
       notebook: this.model
@@ -39,9 +46,9 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     //   model: blankIndexItem,
     //   parent: this
     // });
+    debugger
     this.addNoteIndexItem(newNote);
-    this.render();
-    debugger;
+    // this.render();
   }
 
 
