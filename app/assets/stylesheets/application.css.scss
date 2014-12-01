@@ -72,7 +72,7 @@ background-color: #eaedef;
 
 .notebook-show {
   background-color: white;
-  border: 1px solid black;
+  padding: 0px;
 }
 
 #logo-search-new-wrapper {
@@ -130,4 +130,8 @@ background-color: #eaedef;
 
 .panel-body {
    background-color: white;
+}
+
+.notebook-show-title {
+  border: 1px solid black;
 }
