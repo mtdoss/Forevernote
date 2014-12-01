@@ -4,6 +4,7 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
 
   initialize: function(options) {
     this.parent = options.parent;
+    this.listenTo(this.model, "change", this.render);
   },
 
   events: {
