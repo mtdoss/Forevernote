@@ -6,11 +6,15 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     //multiple show pages to appear - does that imply something's wrong? probably
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, 'add', this.addIndexItem);
-
+    
     // is filled yet?
     // this.addAllIndexItems();
     // this.listenTo(this.model.notes(), "add", this.addNoteIndexItem);
     // this.model.notes().each(this.addNoteIndexItem.bind(this));
+  },
+
+  events: {
+    // "click .new-note": "addNew"
   },
 
   render: function(){
@@ -29,6 +33,16 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
 
     this.addSubview('.notebook-list', indexItem);
   },
+
+  addNew: function(event) {
+    var blankIndexItem = new Evernote.Models.Note({ title: "untitled" });
+    // var newIndexItem = new Evernote.Views.NotebooksIndexItem({
+    //   model: blankIndexItem,
+    //   parent: this
+    // });
+    this.addIndexItem(blankIndexItem);
+    debugger;
+  }
 
   // addAllIndexItems: function() {
 //     this.collection.each(function (notebook) {
