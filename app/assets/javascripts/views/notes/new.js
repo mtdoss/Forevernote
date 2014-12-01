@@ -7,8 +7,9 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
   },
 
   events: {
-    "submit form": "submit"
+    "submit form": "submit",
   },
+
 
   render: function() {
     var content = this.template({

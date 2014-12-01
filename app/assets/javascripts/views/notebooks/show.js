@@ -10,6 +10,10 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     this.parent = options.parent;
   },
 
+  events: {
+    "click .new-note": "addNew" //this won't work: no new-note here
+  },
+
   render: function() {
     var content = this.template({
       notebook: this.model
@@ -26,5 +30,19 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
 
     this.addSubview('.note-index-items', noteIndexItem);
   },
+
+  addNew: function(event) {
+    console.log("doing stuff to a note");
+    event.preventDefault();
+    var newNote = new Evernote.Models.Note({ title: "untitled" });
+    // var newIndexItem = new Evernote.Views.NotebooksIndexItem({
+    //   model: blankIndexItem,
+    //   parent: this
+    // });
+    this.addNoteIndexItem(newNote);
+    this.render();
+    debugger;
+  }
+
 
 });

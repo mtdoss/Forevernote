@@ -13,10 +13,6 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     // this.model.notes().each(this.addNoteIndexItem.bind(this));
   },
 
-  events: {
-    // "click .new-note": "addNew"
-  },
-
   render: function(){
     var content = this.template({ notebooks: this.collection });
     this.$el.html(content);
@@ -32,16 +28,6 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     });
 
     this.addSubview('.notebook-list', indexItem);
-  },
-
-  addNew: function(event) {
-    var blankIndexItem = new Evernote.Models.Note({ title: "untitled" });
-    // var newIndexItem = new Evernote.Views.NotebooksIndexItem({
-    //   model: blankIndexItem,
-    //   parent: this
-    // });
-    this.addIndexItem(blankIndexItem);
-    debugger;
   }
 
   // addAllIndexItems: function() {

@@ -27,7 +27,7 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
       model: this.model,
       parent: this
     });
-    this.parent.parent.parent.addSubviewReplacement('.note-show', noteNew);
+    this.parent.parent.parent.addSubviewReplacement('.note-show', noteNew); //lol
   },
 
   //TODO: this is bad!
