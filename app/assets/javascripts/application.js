@@ -18,6 +18,7 @@
 //= require bootstrap-markdown-bundle
 //= require underscore
 //= require backbone
+//= require jquery.serializejson
 //= require evernote
 //= require_tree ../templates
 //= require_tree ./utils

@@ -71,7 +71,8 @@ background-color: #eaedef;
 }
 
 .notebook-show {
-background-color: white;
+  background-color: white;
+  border: 1px solid black;
 }
 
 #logo-search-new-wrapper {
@@ -90,19 +91,43 @@ background-color: white;
 }
 
 .main-content {
-  background-color: #c9d1d7;
+  background-color: #E1E2E5;
   position: absolute;
   overflow: hidden;
   left: 0px;
   top: 84px;
   right: 0px;
   bottom: 0px;
-}
-.note-show {
- // min-height: 500px;
- background-color: white;
+  height: 100%;
 }
 
+.note-show {
+ // min-height: 500px;
+}
+
+// this doesn't work once i've clicked on something
 .note-index-item:hover {
   background-color: #ADADB1
+}
+
+.note-index-item {
+  border: 1px solid black;
+}
+
+//TODO: i want height to be a % though, i think... but then scroll stops working
+.note-index-items {
+  height: 400px;
+  overflow-y: auto;
+}
+
+#note-body {
+  height: 500px;
+}
+
+.post-edit {
+ overflow-y: auto; 
+}
+
+.panel-body {
+   background-color: white;
 }

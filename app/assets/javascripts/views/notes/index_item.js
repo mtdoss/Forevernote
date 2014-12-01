@@ -23,12 +23,11 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
   },
 
   addShow: function(event) {
-    console.log("doing stuff to a note");
-    var noteShow = new Evernote.Views.NotesNew({
+    var noteNew = new Evernote.Views.NotesNew({
       model: this.model,
       parent: this
     });
-    this.parent.parent.parent.addSubviewReplacement('.note-show', noteShow);
+    this.parent.parent.parent.addSubviewReplacement('.note-show', noteNew);
   },
 
   //TODO: this is bad!

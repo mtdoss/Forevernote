@@ -1,6 +1,12 @@
 
 <div class="panel-body">
   <form class="post-edit">
+  
+   <input type="hidden"
+           name="note[notebook_id]"
+           value="<%= note.escape("notebook_id") %>">
+
+
     <div class="form-group">
       <input type="text"
              id="note-title"
@@ -12,7 +18,7 @@
 
      <div class="form-group">
        <textarea id="note-body"
-                 class="form-control"
+                 class="form-control form-body"
                  data-provide="markdown"
                  name="note[body]"><%= note.escape('body') %> </textarea>
 
