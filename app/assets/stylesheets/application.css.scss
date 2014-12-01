@@ -67,7 +67,8 @@ table {
 }
 
 .notebook-list {
-background-color: #eaedef;
+  background-color: #eaedef;
+  padding-right: 0px;
 }
 
 .notebook-show {
@@ -75,19 +76,19 @@ background-color: #eaedef;
   padding: 0px;
 }
 
-#logo-search-new-wrapper {
-  position: absolute;
-  height: 51px;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  overflow: hidden;
-}
+// #logo-search-new-wrapper {
+//   position: absolute;
+//   height: 51px;
+//   width: 100%;
+//   left: 0px;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   overflow: hidden;
+// }
 
-#logo {
-
+.navbar-brand {
+  margin-top: -15px;
 }
 
 .main-content {
@@ -111,12 +112,12 @@ background-color: #eaedef;
 }
 
 .note-index-item {
-  border: 1px solid black;
+  border: 1px solid gray;
 }
 
 //TODO: i want height to be a % though, i think... but then scroll stops working
 .note-index-items {
-  height: 400px;
+  height: 700px;
   overflow-y: auto;
 }
 
@@ -134,4 +135,9 @@ background-color: #eaedef;
 
 .notebook-show-title {
   border: 1px solid black;
+}
+
+.notebooks-index-header {
+  background-color: orange;
+  display: inline-block;
 }
