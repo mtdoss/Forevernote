@@ -179,8 +179,9 @@ table {
 
 .note-show-nav {
   padding-right: 15px;
-  height: 40px; //why does stuff get shifted to the right when i add this height??
   min-height: 1px;
+  height: 40px;
+  // height: 40px; //why does stuff get shifted to the right when i add this height??
 }
 
 .new-note {
@@ -194,6 +195,8 @@ table {
 .note-show-nav .navbar-text {
   // margin-top: 5px;
   // margin-bottom: 5px;
+  height: 10px;
+  margin: 10px;
 }
 
 .selected-item{
@@ -223,3 +226,12 @@ table {
 // .testtest {
 //   margin-top: 20px;
 // }
+
+.timestamps {
+  min-height: 1px;
+  height: 40px;
+}
+
+.navbar-nav > li .top-note-header {
+  padding: 5px;
+}
