@@ -1,9 +1,9 @@
 Evernote.Views.NoteHeader = Backbone.View.extend({
   template: JST["notes/note_header"],
   
-  // createdAt: function() {
-
-  // }
+  events: {
+    "click .delete": "removeNote"
+  },
 
   render: function() {
     var friendlyCreatedAt = moment(this.model.attributes.created_at, "YYYY MM DD HH:mm:ss").fromNow();
@@ -16,5 +16,9 @@ Evernote.Views.NoteHeader = Backbone.View.extend({
     this.$el.html(content);
     
     return this;
+  },
+
+  removeNote: function() {
+    this.model.destroy();
   }
 });

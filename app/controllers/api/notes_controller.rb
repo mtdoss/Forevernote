@@ -12,6 +12,12 @@ module Api
       end
     end
 
+    def destroy
+      @note = Note.find(params[:id])
+      @note.destroy()
+      render json: {}
+    end
+
     def update
       @note = Note.find(params[:id])
       if @note.update(note_params)
