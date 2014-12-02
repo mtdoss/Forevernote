@@ -191,12 +191,13 @@ table {
   // margin-top: 5px;
   // margin-bottom: 5px;
 }
+
 .selected-item{
   background-color: #ecf0f3;
 }
 
 .notebook-index-header {
-  background-color: orange;
+  padding-left: 7px;
 }
 
 .form-control.search {
@@ -206,7 +207,8 @@ table {
 }
 
 .notebook-index-item {
-  background-color: orange;
+  background-color: #E1E2E5;
+  padding-left: 10px;
 }
 
 // .testtest {

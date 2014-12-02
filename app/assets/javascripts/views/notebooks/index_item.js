@@ -39,7 +39,7 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
 
   classChange: function(event) {
     if (this.parent._clickedOn) {
-      this.parent._clickedOn.css({background: '#eaedef' });
+      this.parent._clickedOn.css({background: '#E1E2E5' });
     }
 
     this.parent._clickedOn = $(event.currentTarget);
