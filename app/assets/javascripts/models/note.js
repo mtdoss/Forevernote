@@ -6,10 +6,10 @@ Evernote.Models.Note = Backbone.Model.extend({
     var content = "";
     if (this.attributes.body){
       content = this.attributes.body;
-      slicedContent = content.slice(0, 80);
+      slicedContent = content.slice(0, 150);
     }
     
-    if (content.length > 80) {
+    if (content.length > 150) {
       return slicedContent + "...";
     } else {
       return slicedContent;

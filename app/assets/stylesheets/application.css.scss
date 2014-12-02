@@ -116,6 +116,8 @@ table {
 .note-index-item {
   border: 1px solid gray;
   padding: 5px;
+  min-height: 75px;
+  line-height: 155%;
 }
 
 //TODO: i want height to be a % though, i think... but then scroll stops working
@@ -172,8 +174,9 @@ table {
 }
 
 .note-show-nav {
-  height: 20px;
+  min-height: 15px;
   padding-right: 15px;
+  // height: 40px; //why does stuff get shifted to the right when i add this height??
 }
 
 .new-note {
@@ -182,6 +185,14 @@ table {
 
 .note-index-item-title {
   font-weight: bold;
+}
+
+.note-show-nav .navbar-text {
+  // margin-top: 5px;
+  // margin-bottom: 5px;
+}
+.selected-item{
+  background-color: #ecf0f3;
 }
 
 // .testtest {

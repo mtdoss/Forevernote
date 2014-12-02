@@ -20,7 +20,9 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
   },
 
   attachHeader: function() {
-    var headerItem = new Evernote.Views.NoteHeader();
+    var headerItem = new Evernote.Views.NoteHeader({
+      model: this.model
+    });
     this.addSubview('.note-header', headerItem);
   },
 

@@ -10,7 +10,7 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
   events: {
     "click": function(event) {
       this.addShow(event);
-      this.classChange(event);
+      // this.classChange(event);
     }
   },
 

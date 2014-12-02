@@ -13,9 +13,17 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     // this.listenTo(this.collection, "sync", this.render);
   },
 
-  // events: {
-  //   "click .new-note": "addNew" //this won't work: no new-note here
-  // },
+  events: {
+    "click .note-index-item": "pickItem" //this won't work: no new-note here
+  },
+
+  pickItem: function(event){
+    var item = $(event.currentTarget);
+    this.$('.note-index-item').removeClass('selected-item');
+    item.addClass('selected-item');
+
+
+  },
 
   onRender: function(){
     //TODO: we ALSO NEED TO overwrite 'remove' and explicitly

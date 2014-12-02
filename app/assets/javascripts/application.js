@@ -19,6 +19,7 @@
 //= require underscore
 //= require backbone
 //= require jquery.serializejson
+//= require moment
 //= require evernote
 //= require_tree ../templates
 //= require_tree ./utils
