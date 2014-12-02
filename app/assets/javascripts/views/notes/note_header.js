@@ -19,7 +19,6 @@ Evernote.Views.NoteHeader = Backbone.View.extend({
   },
 
   removeNote: function() {
-    debugger
     this.model.destroy();
   }
 });

@@ -31,6 +31,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
 
   render: function() {
     console.log('rendering');
+    debugger
     var content = this.template({
       notebook: this.model
     });
@@ -61,7 +62,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     //   model: blankIndexItem,
     //   parent: this
     // });
-    // debugger;
     this.addNoteIndexItem(newNote);
     // notebook.create(newNote, {});
     newNote.save({}, {
