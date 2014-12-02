@@ -108,6 +108,7 @@ table {
  // min-height: 500px;
 }
 
+
 // this doesn't work once i've clicked on something
 .note-index-item:hover {
   background-color: #ADADB1
@@ -174,7 +175,6 @@ table {
 }
 
 .note-show-nav {
-  min-height: 15px;
   padding-right: 15px;
   // height: 40px; //why does stuff get shifted to the right when i add this height??
 }

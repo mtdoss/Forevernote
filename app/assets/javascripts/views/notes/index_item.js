@@ -32,12 +32,12 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
   },
 
   //TODO: this is bad!
-  classChange: function(event) {
-    if (this.parent._clickedOn) {
-      this.parent._clickedOn.css({background: 'white' });
-    }
+  // classChange: function(event) {
+  //   if (this.parent._clickedOn) {
+  //     this.parent._clickedOn.css({background: 'white' });
+  //   }
 
-    this.parent._clickedOn = $(event.currentTarget);
-    this.parent._clickedOn.css({background: '#ecf0f3'});
-  }
+  //   this.parent._clickedOn = $(event.currentTarget);
+  //   this.parent._clickedOn.css({background: '#ecf0f3'});
+  // }
 });
