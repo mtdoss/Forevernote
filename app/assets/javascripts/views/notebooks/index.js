@@ -33,7 +33,9 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   },
 
   addIndexHeader: function() {
-    var indexHeader = new Evernote.Views.NotebookIndexHeader();
+    var indexHeader = new Evernote.Views.NotebookIndexHeader({
+      collection: this.collection
+    });
 
     this.addSubview('.notebook-list', indexHeader);
   },
