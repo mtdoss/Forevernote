@@ -1,35 +1,36 @@
 <div class='note-header'></div>
+<div class="panel-body-wrapper">
+  <div class="panel-body">
+    <form class="post-edit">
+    
+     <input type="hidden"
+             name="note[notebook_id]"
+             value="<%= note.escape("notebook_id") %>">
 
-<div class="panel-body">
-  <form class="post-edit">
-  
-   <input type="hidden"
-           name="note[notebook_id]"
-           value="<%= note.escape("notebook_id") %>">
+      <div class="form-group-wrapper">
+        <div class="form-group">
+          <input type="text"
+                 id="note-title"
+                 name="note[title]"
+                 class="form-control"
+                 placeholder="Title"
+                 value="<%= note.escape('title') %>">
+         </div>
+      </div>
+       <div class="form-group">
+         <textarea id="note-body"
+                   class="form-control form-body"
+                   data-provide="markdown-editable"
+                   name="note[body]"><%= note.escape('body') %> </textarea>
 
+      </div>
 
-    <div class="form-group">
-      <input type="text"
-             id="note-title"
-             name="note[title]"
-             class="form-control"
-             placeholder="Title"
-             value="<%= note.escape('title') %>">
-     </div>
-
-     <div class="form-group">
-       <textarea id="note-body"
-                 class="form-control form-body"
-                 data-provide="markdown-editable"
-                 name="note[body]"><%= note.escape('body') %> </textarea>
-
-    </div>
-
-    <button type="submit"
-            class="btn btn-success pull-left"
-            id="commit-edit">Save</button>
-    <button type="button"
-            class="btn btn-danger pull-right"
-            id="cancel-edit">Cancel</button>
-  </form>
+      <button type="submit"
+              class="btn btn-success pull-left"
+              id="commit-edit">Save</button>
+      <button type="button"
+              class="btn btn-danger pull-right"
+              id="cancel-edit">Cancel</button>
+    </form>
+  </div>
 </div>
