@@ -5,4 +5,4 @@ Evernote.Collections.Notes = Backbone.Collection.extend({
   initialize: function(models, options) {
     this.notebook = options.notebook;
   }
-})
+});

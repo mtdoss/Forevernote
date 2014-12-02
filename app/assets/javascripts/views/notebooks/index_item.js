@@ -4,6 +4,7 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
 
   initialize: function(options) {
     this.parent = options.parent;
+    this.listenTo(this.model.notes(), "add", this.render);
   },
 
   events: {
@@ -15,7 +16,8 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
 
   render: function() {
     var content = this.template({
-      notebook: this.model
+      notebook: this.model,
+      length: this.model.notes().length
     });
     this.$el.html(content);
     return this;
