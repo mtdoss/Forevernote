@@ -70,7 +70,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     // notebook.create(newNote, {});
     newNote.save({}, {
       success: function() {
-        console.log("saving");
+        // console.log("saving");
         // notebook.add(newNote);
         // view.render();
       }

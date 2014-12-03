@@ -120,6 +120,13 @@ table {
   padding-right: 0px;
 }
 
+.notebook-index-item:hover {
+  background-color: orange;
+}
+
+.tag-index-item:hover {
+  background-color: #ADADB1;
+}
 
 // #logo-search-new-wrapper {
 //   position: absolute;
@@ -141,11 +148,9 @@ table {
 }
 
 #sign-out {
-  // margin-right: 5px;
   padding: 0px;
   padding-right: 15px;
   color: white;
-  // padding-bottom: 5px;
   height: 1px;
 }
 
@@ -164,7 +169,6 @@ table {
  padding-left: 0px;
 }
 
-// this doesn't work once i've clicked on something
 .note-index-item:hover {
   background-color: #ADADB1
 }
