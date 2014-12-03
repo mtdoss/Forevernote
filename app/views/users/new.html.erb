@@ -1,4 +1,4 @@
-<h1> Sign Up</h1>
+<!-- <h1> Sign Up</h1>
 
 <form action="<%= users_url %>" method="POST">
 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -18,4 +18,34 @@
 
 <input type="submit" value="Sign Up">
 
-</form>
+</form> -->
+
+
+<div class="container">
+  <div id="bg">
+    <img src="<%= asset_path 'backgroundforest.jpg' %>" alt="">
+  </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pr-wrap">
+                <div class="pass-reset">
+                    <label>
+                        Enter the email you signed up with</label>
+                    <input type="email" placeholder="Email" />
+                    <input type="submit" value="Submit" class="pass-reset-submit btn btn-success btn-sm" />
+                </div>
+            </div>
+            <div class="wrap">
+                <p class="form-title">
+                    Sign Up</p>
+                <form action="<%= users_url %>" method="POST" class="login">
+                      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="text" placeholder="Username" name="user[email]" />
+                <input type="password" placeholder="Password" name="user[password]" />
+                <input type="submit" value="Sign Up" class="btn btn-success btn-sm" />
+                <button class="btn btn-success btn-sm"><%= link_to "Already have an account?", new_session_url %></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
