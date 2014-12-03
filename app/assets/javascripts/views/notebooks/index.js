@@ -39,7 +39,6 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
 
   addTagsIndexItem: function(indexItem) {
     console.log('adding tag index item');
-    debugger;
     var tagIndexItem = new Evernote.Views.TagIndexItem({
       model: indexItem
     });
