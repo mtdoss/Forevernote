@@ -3,8 +3,7 @@ Evernote.Views.TagsIndex = Backbone.CompositeView.extend({
 
   initialize: function(options){
     this.tags = options.tags;
-    debugger;
-    // this.listenTo(this.tags, )
+    this.listenTo(this.tags, "add", this.addIndexItem);
     this.tags.each(this.addIndexItem.bind(this));
   },
 
@@ -12,8 +11,8 @@ Evernote.Views.TagsIndex = Backbone.CompositeView.extend({
     var indexItemView = new Evernote.Views.TagIndexItem({
       model: indexItem
     });
-
-    this.addSubview('tags-index', indexItemView);
+    
+    this.addSubview('.tags-index', indexItemView);
   },
 
   render: function() {
