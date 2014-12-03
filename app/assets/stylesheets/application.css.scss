@@ -70,13 +70,13 @@ table {
 //   -o-background-size: cover;
 //   background-size: cover;
 // }
-body
-{
-    background: url('http://farm3.staticflickr.com/2832/12303719364_c25cecdc28_b.jpg') fixed;
-    background-size: cover;
-    padding: 0;
-    margin: 0;
-}
+// body
+// {
+//     background: url('http://farm3.staticflickr.com/2832/12303719364_c25cecdc28_b.jpg') fixed;
+//     background-size: cover;
+//     padding: 0;
+//     margin: 0;
+// }
 
 .wrap
 {
@@ -101,7 +101,7 @@ p.form-title
     letter-spacing: 4px;
 }
 
-form
+form.login
 {
     width: 250px;
     margin: 0 auto;
@@ -251,8 +251,6 @@ form.login a:hover
     padding: 10px;
     left: 45%;
 }
-
-
 
 #bg {
   position: fixed;
