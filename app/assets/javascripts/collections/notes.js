@@ -7,7 +7,8 @@ Evernote.Collections.Notes = Backbone.Collection.extend({
     return -date.getTime();
 
   },
-
+  // comparator: "title",
+  
   initialize: function(models, options) {
     this.notebook = options.notebook;
   }
