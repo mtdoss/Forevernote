@@ -13,11 +13,6 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     this.listenTo(this.tagsCollection, "sync", this.render);
     this.listenTo(this.tagsCollection, "add", this.addTagsIndexItem);
     this._first = false;
-    // is filled yet?
-    // this.addAllIndexItems();
-    // this.listenTo(this.model.notes(), "add", this.addNoteIndexItem);
-    // this.model.notes().each(this.addNoteIndexItem.bind(this));
-    // debugger;
     this.addTagsIndex();
   },
 
