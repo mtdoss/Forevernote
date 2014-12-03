@@ -298,7 +298,12 @@ form.login a:hover
   background-color: #eaedef;
   padding-right: 0px;
   padding-left: 15px;
-  margin-top: 40px;
+  // margin-top: 40px;
+}
+
+.bs-example-modal-sm {
+  background-color: orange;
+  z-index: 99;
 }
 
 // .notebooks-index-header {
