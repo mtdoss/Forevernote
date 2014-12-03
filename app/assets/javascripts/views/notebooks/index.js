@@ -50,7 +50,15 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   },
 
  addNewNotebook: function() {
-    var newNotebook = new Evernote.Views.NotebooksNew();
+    // debugger;
+    //TODO: CURRENT USER?
+    var newNote = new Evernote.Models.Notebook({
+      title: "untitled",
+      user_id: 1
+    });
+    var newNotebook = new Evernote.Views.NotebooksNew({
+      model: newNote
+    });
 
     this.addSubview('.notebook-list', newNotebook);
   },
