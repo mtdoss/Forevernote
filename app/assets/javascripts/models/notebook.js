@@ -12,7 +12,7 @@ Evernote.Models.Notebook = Backbone.Model.extend({
   parse: function(response) {
     if (response.notes) {
       this.notes().set(response.notes, { parse: true });
-      delete response.notes
+      delete response.notes;
     }
 
     return response;

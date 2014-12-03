@@ -1,7 +1,12 @@
 Evernote.Collections.Notes = Backbone.Collection.extend({
   url: "/api/notes",
   model: Evernote.Models.Note,
-  comparator: "created_at",
+  comparator: function(note){
+    
+    var date = new Date(note.get('created_at'));
+    return -date.getTime();
+
+  },
 
   initialize: function(models, options) {
     this.notebook = options.notebook;

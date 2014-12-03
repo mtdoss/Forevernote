@@ -50,7 +50,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
       model: indexItem,
       parent: this
     });
-
     this.addSubview('.note-index-items', noteIndexItem);
   },
 
