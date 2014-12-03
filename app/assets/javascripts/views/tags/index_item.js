@@ -3,7 +3,6 @@ Evernote.Views.TagIndexItem = Backbone.View.extend({
   className: 'tag-index-item',
 
   render: function(){
-    debugger;
     var content = this.template({
       tag: this.model
     });
