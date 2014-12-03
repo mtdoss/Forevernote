@@ -40,13 +40,14 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   removeNote: function(removedNote) {
-    // this.removeSubview('note-index-item', removedNote); //won't work; removedNote is the model
     //TODO
-    // var noteSubviews = this.subviews('.note-index-items');
-    // var subToRemove = _.find(noteSubviews, function(subview){
-    //   removedNote.id == subview.model.id;
-    // });
-    this.render();
+    var noteSubviews = this.subviews('.note-index-items');
+    var subToRemove = _.find(noteSubviews, function(subview){
+      return removedNote.id === subview.model.id;
+    });
+    // debugger;
+    this.removeSubview('note-index-item', subToRemove);
+    // this.render();
   },
 
   addNoteIndexItem: function(indexItem) {
