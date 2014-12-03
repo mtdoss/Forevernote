@@ -366,13 +366,23 @@ form.login a:hover
 // }
 
 .navbar-brand {
-  margin-top: -15px;
+  // margin-top: -10px;
+  // float: left;
+  padding: 0px;
+  margin-top: 10px;
+  min-height: 35px;
+  height: 35px;
 }
 
 .promo {
   width: 80px;
 }
 
+.logo-text {
+  background-color: orange;
+  float: left;
+  margin-top: 10px;
+}
 #sign-out {
   padding: 0px;
   padding-right: 15px;
