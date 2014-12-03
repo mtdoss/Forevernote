@@ -90,6 +90,19 @@ table {
   padding-bottom: 9px;
   padding-left: 4px;
   font-weight: bold;
+  background-color: orange;
+  margin-left: -15px;
+}
+
+.tag-index-header {
+  min-height: 30px;
+  font-size: 11px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 4px;
+  font-weight: bold;
+  background-color: orange;
+  margin-left: -15px;
 }
 
 
@@ -152,7 +165,7 @@ table {
 }
 
 .notebook-show-title {
-  border: 1px solid black;
+  border: 1px solid gray;
   padding-left: 7px;
   min-height: 35px;
   line-height: 36px;
