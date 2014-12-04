@@ -1,6 +1,6 @@
 Evernote.Views.TagIndexItem = Backbone.View.extend({
   template: JST["tags/index_item"],
-  className: 'tag-index-item',
+  className: 'tag-index-item notebook-tag-index-item',
   
   events: {
     "click": "doStuff"
@@ -15,7 +15,7 @@ Evernote.Views.TagIndexItem = Backbone.View.extend({
     return this;
   },
 
-  doStuff: function() {
-    alert("doing stuff");
+  doStuff: function(event) {
+    debugger;
   }
 });
