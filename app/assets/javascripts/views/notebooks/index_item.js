@@ -24,6 +24,7 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   },
 
   addNotebookShow: function(event) {
+    debugger;
     this.model.fetch();
     var notebookShow = new Evernote.Views.NotebooksShow({
       model: this.model,
