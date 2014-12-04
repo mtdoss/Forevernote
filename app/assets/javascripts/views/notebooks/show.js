@@ -13,7 +13,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   events: {
-    "click .note-index-item": "pickItem" //this won't work: no new-note here
+    "click .note-index-item": "pickItem"
   },
 
   pickItem: function(event){
@@ -56,6 +56,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
       parent: this
     });
     this.addSubview('.note-index-items', noteIndexItem);
+    $('.note-index-item').click();
   },
 
   addNew: function(event) {
