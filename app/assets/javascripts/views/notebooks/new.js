@@ -16,7 +16,6 @@ Evernote.Views.NotebooksNew = Backbone.View.extend({
     event.preventDefault();
     var view = this;
     var params = $(event.currentTarget).serializeJSON();
-    debugger;
     this.model.set("title", $("#notebook-title").val());
     // this.model.set(params);
     if (this.model.isNew()) {
@@ -24,6 +23,8 @@ Evernote.Views.NotebooksNew = Backbone.View.extend({
     } else {
       this.model.save({}, {});
     }
+    debugger;
+    // this.$el.modal().close();
 
   }
 });
