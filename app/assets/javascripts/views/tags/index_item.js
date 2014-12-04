@@ -17,6 +17,7 @@ Evernote.Views.TagIndexItem = Backbone.View.extend({
 
   listItems: function(event) {
     this.model.fetch();
-    console.log(this.model.notes());
+    debugger;
+    console.log(this.model.notes().length);
   }
 });

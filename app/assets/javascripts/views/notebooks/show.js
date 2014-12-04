@@ -7,13 +7,17 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     this.model.notes().each(this.addNoteIndexItem.bind(this));
     this.listenTo(this.model.notes(), "remove", this.removeNote);
     this.listenTo(this.model.notes(), "add remove", this.selectFirst);
-
+    this.listenTo(this.model.notes(), "sync", this.doStuff);
     this.parent = options.parent;
     this._first = false;
   },
 
   events: {
     "click .note-index-item": "pickItem"
+  },
+
+  doStuff: function(){
+    debugger;
   },
 
   pickItem: function(event){

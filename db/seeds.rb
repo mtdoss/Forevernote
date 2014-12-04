@@ -33,3 +33,5 @@ nb1.notes.create!(title: "Butternut Squash", body: "Preheat an oven to 425 degre
 Toss the squash, onion, olive oil, 1/2 cup Italian bread crumbs, thyme, and blue cheese in a large mixing bowl. Season with salt and pepper. Pour the mixture into a large baking dish. Sprinkle 1/4 cup bread crumbs over the squash.
 
 Bake in the preheated oven until lightly browned on top, 35 to 40 minutes.")
+
+# guest_user.notebooks.create!(title:)

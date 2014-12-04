@@ -14,5 +14,22 @@ Evernote.Models.Note = Backbone.Model.extend({
     } else {
       return slicedContent;
     }
-	}
+  },
+
+  tags: function() {
+    if (!this._tags) {
+      this._tags = new Evernote.Collections.Tags( [], { note: this });
+    }
+
+    return this._tags;
+  },
+
+  parse: function(response) {
+    if (response.tags) {
+      this.tags().set(response.tags, { parse: true });
+      delete response.tags;
+    }
+
+    return response;
+  }
 });
