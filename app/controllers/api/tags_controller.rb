@@ -1,7 +1,7 @@
 module Api
   class TagsController < ApiController
     def index
-      @tags = Tag.all
+      @tags = current_user.tags
       render json: @tags
     end
   end
