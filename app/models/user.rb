@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   has_many :notebooks
+  has_many :taggings
+  has_many :tags, through: :taggings
 
   attr_reader :password
   after_initialize :ensure_session_token
