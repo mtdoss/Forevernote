@@ -1,6 +1,12 @@
 Evernote.Routers.Router = Backbone.Router.extend({
   initialize: function(options) {
     this.$rootEl = $(options.rootEl);
+
+    $('.guest-login').on('click', function (event) {
+      event.preventDefault();
+      $("#username").attr("value", "guest@guest.guest");
+      $("#password").attr("value", "star_wars");
+    });
   },
 
   routes: {
