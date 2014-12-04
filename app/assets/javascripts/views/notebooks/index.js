@@ -17,6 +17,16 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     this.addTagsIndex();
   },
 
+  events: {
+    "click .notebook-tag-index-item": "pickItem"
+  },
+
+  pickItem: function(event) {
+    var item = $(event.currentTarget);
+    this.$('.notebook-tag-index-item').removeClass('notebook-tag-index-selected-item');
+    item.addClass('notebook-tag-index-selected-item');
+  },
+
   render: function(){
     var content = this.template({ notebooks: this.collection });
     this.$el.html(content);

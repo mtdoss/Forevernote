@@ -1,6 +1,6 @@
 Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   template: JST["notebooks/index_item"],
-  className: 'notebook-index-item',
+  className: 'notebook-index-item notebook-tag-index-item',
 
   initialize: function(options) {
     this.parent = options.parent;
@@ -10,7 +10,7 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   events: {
     "click": function(event) {
       this.addNotebookShow(event);
-      this.classChange(event);
+      // this.classChange(event);
     }
   },
 
@@ -34,12 +34,12 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
     this.parent.addSubviewReplacement('.notebook-show', notebookShow);
   },
 
-  classChange: function(event) {
-    if (this.parent._clickedOn) {
-      this.parent._clickedOn.css({background: '#E1E2E5' });
-    }
+  // classChange: function(event) {
+  //   if (this.parent._clickedOn) {
+  //     this.parent._clickedOn.css({background: '#E1E2E5' });
+  //   }
 
-    this.parent._clickedOn = $(event.currentTarget);
-    this.parent._clickedOn.css({background: '#ADADB1'});
-  }
+  //   this.parent._clickedOn = $(event.currentTarget);
+  //   this.parent._clickedOn.css({background: '#ADADB1'});
+  // }
 });

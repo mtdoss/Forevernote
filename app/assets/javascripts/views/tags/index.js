@@ -1,5 +1,6 @@
 Evernote.Views.TagsIndex = Backbone.CompositeView.extend({
   template: JST["tags/index"],
+  className: 'notebook-tag-index-item',
 
   initialize: function(options){
     this.tags = options.tags;

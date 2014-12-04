@@ -352,7 +352,7 @@ form.login a:hover
 }
 
 .notebook-index-item:hover {
-  background-color: orange;
+  background-color: #ADADB1;
 }
 
 .tag-index-item:hover {
@@ -505,6 +505,10 @@ form.login a:hover
 
 .selected-item{
   background-color: #ecf0f3;
+}
+
+.notebook-tag-index-selected-item{
+  background-color: orange;
 }
 
 .form-control.search {
