@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   has_many :notebooks
-  has_many :taggings
+  has_many :notes, through: :notebooks
+  has_many :taggings, through: :notes
   has_many :tags, through: :taggings
 
   attr_reader :password
