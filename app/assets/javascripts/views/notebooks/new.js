@@ -17,13 +17,12 @@ Evernote.Views.NotebooksNew = Backbone.View.extend({
     var view = this;
     var params = $(event.currentTarget).serializeJSON();
     this.model.set("title", $("#notebook-title").val());
-    // this.model.set(params);
+    // this.model.set(params); //why isn't this working?
     if (this.model.isNew()) {
       Evernote.Collections.notebooks.create(this.model, {});
     } else {
       this.model.save({}, {});
     }
-    // debugger;
     this.$el.modal().hide();
 
   }
