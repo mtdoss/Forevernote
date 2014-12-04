@@ -47,6 +47,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     });
     // debugger;
     this.removeSubview('note-index-item', subToRemove);
+    $('note-index-item').click();
     // this.render();
   },
 
