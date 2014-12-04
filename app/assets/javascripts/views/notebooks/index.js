@@ -14,7 +14,7 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     this.listenTo(this.tagsCollection, "sync", this.render);
     this.listenTo(this.tagsCollection, "add", this.addTagsIndexItem);
     this._first = false;
-    this.addTagsIndex();
+    // this.addTagsIndex();
   },
 
   events: {
@@ -35,12 +35,12 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     return this;
   },
 
-  addTagsIndex: function(){
-    var tagsIndex = new Evernote.Views.TagsIndex({
-      tags: this.tagsCollection
-    });
-    this.addSubview('.tags-index', tagsIndex);
-  },
+  // addTagsIndex: function(){
+  //   var tagsIndex = new Evernote.Views.TagsIndex({
+  //     tags: this.tagsCollection
+  //   });
+  //   this.addSubview('.tags-index', tagsIndex);
+  // },
 
   addTagsIndexItem: function(indexItem) {
     var tagIndexItem = new Evernote.Views.TagIndexItem({
@@ -55,7 +55,7 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
       model: indexItem,
       parent: this
     });
-
+    window.wtf = indexItem;
     this.addSubview('.notebook-list', indexItem);
   },
 
