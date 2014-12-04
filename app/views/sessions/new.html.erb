@@ -55,7 +55,9 @@
                 <button type="submit" class="btn btn-success btn-sm guest-login">Guest Login</button>
                 
                 </form>
-<%= button_to "Sign Up", new_user_url, id: "sign-up", class: "btn btn-success btn-sm sign-up login", :method => :get %>
+                    <div class="sign-up-wrapper">
+    <%= button_to "Sign Up", new_user_url, id: "sign-up", class: "btn btn-success btn-sm sign-up login", :method => :get %>
+    </div>
             </div>
         </div>
     </div>
