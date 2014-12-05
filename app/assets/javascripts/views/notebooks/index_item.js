@@ -4,6 +4,7 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
 
   initialize: function(options) {
     this.parent = options.parent;
+    this.model.fetch();
     this.listenTo(this.model.notes(), "add", this.render);
   },
 
@@ -23,7 +24,7 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   },
 
   addNotebookShow: function(event) {
-    this.model.fetch();
+    // this.model.fetch();
     var notebookShow = new Evernote.Views.NotebooksShow({
       model: this.model,
       parent: this

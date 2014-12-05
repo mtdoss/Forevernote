@@ -98,3 +98,5 @@ nb3.notes.create!(title: "Movies", body: "Interstellar was awesome!
   The Batman Trilogy (except the last one wasn't that good)
 
   Pan's Labyrinth")
+
+
