@@ -27,9 +27,10 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
     this.addSubview('.note-header', headerItem);
   },
 
+  //this is undoubtedly a bad way to do it
   throttledSubmit: function(event) {
     var timer  = null;
-    document.getElementById("note-body").onkeypress = function() {
+    document.getElementById("note-body").onkeyup = function() {
       if (timer) {
         window.clearTimeout(timer);
       }
