@@ -18,7 +18,12 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   },
 
   events: {
+    "click .notebook-index-item": "doStuff",
     "click .notebook-tag-index-item": "pickItem"
+  },
+
+  doStuff: function(){
+    // debugger;
   },
 
   pickItem: function(event) {

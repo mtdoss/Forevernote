@@ -87,7 +87,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
       $('.note-index-item').click();
     }
     if ($('.note-index-item').length > 0){
-    this._first = true;
+      this._first = true;
     }
   }
 });
