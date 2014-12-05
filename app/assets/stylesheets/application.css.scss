@@ -465,7 +465,7 @@ p.form-title
 
 //TODO: i want height to be a % though, i think... but then scroll stops working
 .note-index-items {
-  height: 700px;
+  height: 800px;
   overflow-y: auto;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1;
@@ -475,7 +475,7 @@ p.form-title
 }
 
 #note-body {
-  height: 500px;
+  height: 600px;
 }
 
 .post-edit {
@@ -485,6 +485,8 @@ p.form-title
 .panel-body-wrapper {
   background-color: #f3f5f7;
   padding: 15px;
+  height: 700px;
+  // padding-bottom: 0px;
 }
 
 .panel-body {
