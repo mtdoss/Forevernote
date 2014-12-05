@@ -22,6 +22,7 @@ Evernote.Views.NotebooksNew = Backbone.View.extend({
       Evernote.Collections.notebooks.create(this.model, {});
     } else {
       this.model.save({}, {});
+      Evernote.Collections.notebooks.add(this.model);
     }
     $('#myModal').modal().hide();
 
