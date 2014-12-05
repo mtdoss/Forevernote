@@ -82,7 +82,7 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   },
 
   selectFirst: function() {
-    if (this._first) {
+    if (!this._first) {
       $('.notebook-index-item').click();
     }
     this._first = true;
