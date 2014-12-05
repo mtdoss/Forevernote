@@ -8,8 +8,11 @@ Evernote.Views.NoteHeader = Backbone.View.extend({
 
   render: function() {
     var offset = new Date().getTimezoneOffset() / 60;
-    var friendlyCreatedAt = moment(this.model.attributes.created_at, "YYYY MM DD HH:mm:ss").fromNow();
-    var friendlyUpdatedAt = moment(this.model.attributes.updated_at, "YYYY MM DD HH:mm:ss").fromNow();
+    // debugger;
+    var createdTime = moment(this.model.attributes.created_at, "YYYY MM DD HH:mm:ss").subtract(offset, "hours");
+    var updatedTime = moment(this.model.attributes.updated_at, "YYYY MM DD HH:mm:ss").subtract(offset, "hours");
+    var friendlyCreatedAt = createdTime.fromNow();
+    var friendlyUpdatedAt = updatedTime.fromNow();
     var content = this.template({
       note: this.model,
       createdAt: friendlyCreatedAt,

@@ -10,7 +10,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     this.parent = options.parent;
     this._first = false;
     this.selectFirst();
-    // debugger;
   },
 
   events: {
@@ -50,7 +49,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   addNoteIndexItem: function(indexItem) {
-    // debugger;
     this.selectFirst();
     var noteIndexItem = new Evernote.Views.NotesIndexItem({
       model: indexItem,
@@ -61,7 +59,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   addNoteIndexItemPrepend: function(indexItem) {
-    // debugger;
     this.selectFirst();
     var noteIndexItem = new Evernote.Views.NotesIndexItem({
       model: indexItem,
