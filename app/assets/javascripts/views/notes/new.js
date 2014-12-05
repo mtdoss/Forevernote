@@ -36,7 +36,7 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
       }
       timer = window.setTimeout( function() {
         timer = null;
-        $("#commit-edit").click()
+        $("#commit-edit").click();
       }, 500);
     };
   },
