@@ -8,6 +8,7 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
 
   events: {
     "submit form": "submit",
+    "keyup #note-body": "throttledSubmit"
   },
 
   render: function() {
@@ -24,6 +25,19 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
       model: this.model
     });
     this.addSubview('.note-header', headerItem);
+  },
+
+  throttledSubmit: function(event) {
+    var timer  = null;
+    document.getElementById("note-body").onkeypress = function() {
+      if (timer) {
+        window.clearTimeout(timer);
+      }
+      timer = window.setTimeout( function() {
+        timer = null;
+        $("#commit-edit").click()
+      }, 500);
+    };
   },
 
   submit: function(event) {
@@ -58,3 +72,20 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
     // } else {
     //   this.model.save({}, { success: success })
     // }
+
+// function addTextAreaCallback(textArea, callback, delay) {
+//     var timer = null;
+//     textArea.onkeypress = function() {
+//         if (timer) {
+//             window.clearTimeout(timer);
+//         }
+//         timer = window.setTimeout( function() {
+//             timer = null;
+//             callback();
+//         }, delay );
+//     };
+//     textArea = null;
+// }
+
+// addTextAreaCallback( document.getElementById("#note-body"), $("#commit-edit").click(), 1000 );
+// // addTextAreaCallback( document.getElementById("#note-title"), $("#commit-edit").click(), 1000 );

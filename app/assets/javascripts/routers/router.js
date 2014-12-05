@@ -12,17 +12,17 @@ Evernote.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "notebooks": "notebooksIndex",
-    "notebooks/:id": "notebooksShow"
+    // "notebooks/:id": "notebooksShow"
   },
 
   //I don't think I actually want this
-  notebooksShow: function(id) {
-    var notebook = Evernote.Collections.notebooks.getOrFetch(id);
-    var showView = new Evernote.Views.NotebooksShow({
-      model: notebook
-    });
-    this._swapView(showView);
-  },
+  // notebooksShow: function(id) {
+  //   var notebook = Evernote.Collections.notebooks.getOrFetch(id);
+  //   var showView = new Evernote.Views.NotebooksShow({
+  //     model: notebook
+  //   });
+  //   this._swapView(showView);
+  // },
 
   notebooksIndex: function() {
     var notebooks = Evernote.Collections.notebooks;

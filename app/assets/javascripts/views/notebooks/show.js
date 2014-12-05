@@ -17,7 +17,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   doStuff: function(){
-    debugger;
+    // debugger;
   },
 
   pickItem: function(event){
