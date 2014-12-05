@@ -50,6 +50,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   addNoteIndexItem: function(indexItem) {
+    this.selectFirst();
     var noteIndexItem = new Evernote.Views.NotesIndexItem({
       model: indexItem,
       parent: this
@@ -82,12 +83,25 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   selectFirst: function() {
-    debugger;
-    if (!this._first) {
-      $('.note-index-item').click();
+    // debugger;
+    var that = this;
+    if (this.model.notes().length > 0) {
+      var newest = this.model.notes().first().get('created_at');
+      this.model.notes().each(function(note) {
+        if (note.get('created_at') >= newest) {
+          newest = note.get('created_at');
+          $('.note-index-item').first().click();
+        }
+      });
     }
-    if ($('.note-index-item').length > 0){
-      this._first = true;
-    }
+    // debugger;
+
+    // if (!this._first) {
+    //   $('.note-index-item').click();
+    // }
+    // if ($('.note-index-item').length > 0){
+    //   this._first = true;
+    // }
+
   }
 });

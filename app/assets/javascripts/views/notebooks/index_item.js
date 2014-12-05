@@ -14,13 +14,6 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
     }
   },
 
-  clearFirst: function() {
-    debugger;
-    if ($('.note-index-item').length === 0) {
-    this._child._first = false;
-    }
-  },
-
   render: function() {
     var content = this.template({
       notebook: this.model,
@@ -32,13 +25,17 @@ Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
 
   addNotebookShow: function(event) {
     this.model.fetch();
+    // debugger;
     var notebookShow = new Evernote.Views.NotebooksShow({
       model: this.model,
       parent: this
     });
     this._child = notebookShow;
     // this._currentView = notebookShow
+    // debugger;
     // this.$el.find('.notebook-show').html(notebookShow.render().$el)
     this.parent.addSubviewReplacement('.notebook-show', notebookShow);
+    // debugger;
+    this._child.selectFirst();
   },
 });
