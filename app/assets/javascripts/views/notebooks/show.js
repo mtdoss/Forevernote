@@ -55,8 +55,8 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
       model: indexItem,
       parent: this
     });
-    this.addSubview('.note-index-items', noteIndexItem);
-    $('.note-index-item').last().click();
+    this.addSubviewPrepend('.note-index-items', noteIndexItem);
+    $('.note-index-item').first().click();
   },
 
   addNew: function(event) {

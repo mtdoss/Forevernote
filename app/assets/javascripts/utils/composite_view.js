@@ -5,6 +5,11 @@ Backbone.CompositeView = Backbone.View.extend({
     this.attachSubview(selector, subview.render());
   },
 
+  addSubviewPrepend: function (selector, subview) {
+    this.subviews(selector).push(subview);
+    this.attachSubviewPrepend(selector, subview.render());
+  },
+
   //bad
   //TODO: fix this, and also figure out why it was working earlier
   addSubviewReplacement: function (selector, subview) {
@@ -17,6 +22,17 @@ Backbone.CompositeView = Backbone.View.extend({
 
   attachSubview: function (selector, subview) {
     this.$(selector).append(subview.$el);
+
+    subview.delegateEvents();
+    subview.onRender && subview.onRender();
+
+    if (subview.attachSubviews) {
+      subview.attachSubviews();
+    }
+  },
+
+  attachSubviewPrepend: function (selector, subview) {
+    this.$(selector).prepend(subview.$el);
 
     subview.delegateEvents();
     subview.onRender && subview.onRender();
