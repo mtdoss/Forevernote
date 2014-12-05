@@ -84,4 +84,17 @@ nb3.notes.create!(title: "Books", body: "Crime and Punishment
 
   Harry Potter
 
-  ")
+  Anna Karenina")
+
+
+nb3.notes.create!(title: "Movies", body: "Interstellar was awesome!
+
+  American Beauty
+
+  Grand Budapest Hotel
+
+  Moonrise Kingdom
+
+  The Batman Trilogy (except the last one wasn't that good)
+
+  Pan's Labyrinth")
