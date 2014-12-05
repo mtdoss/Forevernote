@@ -23,7 +23,7 @@ Evernote.Views.NotebooksNew = Backbone.View.extend({
     } else {
       this.model.save({}, {});
     }
-    this.$el.modal().hide();
+    $('#myModal').modal().hide();
 
   }
 });
