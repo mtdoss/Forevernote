@@ -2,8 +2,6 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   template: JST["notebooks/index"],
 
   initialize: function(options) {
-    //first listenTo causes weird behavior where fetching in console causes
-    //multiple show pages to appear - does that imply something's wrong? probably
     this.tagsCollection = options.tagsCollection;
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, 'add', this.addIndexItem);
@@ -14,6 +12,7 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     this.listenTo(this.tagsCollection, "sync", this.render);
     this.listenTo(this.tagsCollection, "add", this.addTagsIndexItem);
     this._first = false;
+    // this.listenTo(this.collection.models, "sync", this.render);
     // this.addTagsIndex();
   },
 
