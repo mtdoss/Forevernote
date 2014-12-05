@@ -9,7 +9,7 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
     this.listenTo(this.model.notes(), "add remove", this.selectFirst);
     this.parent = options.parent;
     this._first = false;
-    // this.selectFirst();
+    this.selectFirst();
     // debugger;
   },
 
@@ -82,11 +82,12 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   selectFirst: function() {
-    var that = this;
-    var newest = this.model.notes().first().get('created_at');
+    debugger;
     if (!this._first) {
       $('.note-index-item').click();
     }
+    if ($('.note-index-item').length > 0){
     this._first = true;
+    }
   }
 });
