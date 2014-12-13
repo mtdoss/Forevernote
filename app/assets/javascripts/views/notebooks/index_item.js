@@ -1,12 +1,12 @@
 Evernote.Views.NotebooksIndexItem = Backbone.View.extend({
   template: JST["notebooks/index_item"],
-  
+
   className: 'notebook-index-item notebook-tag-index-item',
 
   initialize: function(options) {
     this.parent = options.parent;
     this.model.fetch();
-    this.listenTo(this.model.notes(), "add", this.render);
+    this.listenTo(this.model.notes(), "add remove", this.render);
   },
 
   events: {
