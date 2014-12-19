@@ -8,21 +8,13 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "add", this.selectFirst);
     this.addNewNotebook();
     this.addIndexHeader();
-    // this.listenTo(this.tagsCollection, "sync", this.addTagsIndex);
     this.listenTo(this.tagsCollection, "sync", this.render);
     this.listenTo(this.tagsCollection, "add", this.addTagsIndexItem);
     this._first = false;
-    // this.listenTo(this.collection.models, "sync", this.render);
-    // this.addTagsIndex();
   },
 
   events: {
-    "click .notebook-index-item": "doStuff",
     "click .notebook-tag-index-item": "pickItem"
-  },
-
-  doStuff: function(){
-    // debugger;
   },
 
   pickItem: function(event) {
@@ -39,13 +31,6 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
     return this;
   },
 
-  // addTagsIndex: function(){
-  //   var tagsIndex = new Evernote.Views.TagsIndex({
-  //     tags: this.tagsCollection
-  //   });
-  //   this.addSubview('.tags-index', tagsIndex);
-  // },
-
   addTagsIndexItem: function(indexItem) {
     var tagIndexItem = new Evernote.Views.TagIndexItem({
       model: indexItem
@@ -59,12 +44,10 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
       model: indexItem,
       parent: this
     });
-    window.wtf = indexItem;
     this.addSubview('.notebook-list', indexItem);
   },
 
  addNewNotebook: function() {
-    // debugger;
     //TODO: CURRENT USER?
     var newNote = new Evernote.Models.Notebook({
       title: "untitled",
@@ -93,9 +76,4 @@ Evernote.Views.NotebooksIndex = Backbone.CompositeView.extend({
   },
 
 
-  // addAllIndexItems: function() {
-//     this.collection.each(function (notebook) {
-//       this.addIndexItem(notebook);
-//     }.bind(this));
-//}
 });

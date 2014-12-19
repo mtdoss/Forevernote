@@ -3,7 +3,6 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
 
   initialize: function() {
     this.attachHeader();
-    // this.listenTo(this.model, "sync", this.render);
   },
 
   events: {
@@ -27,7 +26,6 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
     this.addSubview('.note-header', headerItem);
   },
 
-  //this is undoubtedly a bad way to do it
   throttledSubmit: function(event) {
     var timer  = null;
     document.getElementById("note-body").onkeyup = function() {

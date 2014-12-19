@@ -10,7 +10,6 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
   events: {
     "click": function(event) {
       this.addShow(event);
-      // this.classChange(event);
     }
   },
 
@@ -29,15 +28,5 @@ Evernote.Views.NotesIndexItem = Backbone.CompositeView.extend({
       parent: this
     });
     this.parent.parent.parent.addSubviewReplacement('.note-show', noteNew); //lol
-  },
-
-  //TODO: this is bad!
-  // classChange: function(event) {
-  //   if (this.parent._clickedOn) {
-  //     this.parent._clickedOn.css({background: 'white' });
-  //   }
-
-  //   this.parent._clickedOn = $(event.currentTarget);
-  //   this.parent._clickedOn.css({background: '#ecf0f3'});
-  // }
+  }
 });
