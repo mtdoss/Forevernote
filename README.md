@@ -7,8 +7,26 @@ application, built using Backbone.js. Here are some notable features:
 
 * Consumes a RESTful Rails API
 
+* Uses JSON JBuilder to return Rails models for Backbone use
+
+* Created a custom <a href="https://github.com/mtdoss/Forevernote/blob/master/app/assets/javascripts/utils/composite_view.js">Backbone Composite View class</a> to enable subviews throughout
+the application. For example, each note preview is a subview of the notebook
+to which it belongs; each note show page is a subview of the note preview
+
 * Notes are automatically saved as they are typed. I throttled the submit
 function to avoid excess network requests; you can see the code for that
 <a href="https://github.com/mtdoss/Forevernote/blob/master/app/assets/javascripts/views/notes/new.js#L29">here</a>
 
-* 
+* Custom user authentication so that users can only view their own notes/notebooks.
+I <a href="https://github.com/mtdoss/Forevernote/blob/master/app/models/user.rb#L21">overrode the User#password= method</a> to store BCrypt hashes instead of storing plain passwords in the database.
+
+There are still some important things TO DO:
+
+* Tags are not yet implemented
+
+* Search is not yet implemented
+
+* Add some user-friendly functionality like the ability to star notes
+
+* Add the ability to password-protect individual notebooks
+
