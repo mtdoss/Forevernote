@@ -10,8 +10,6 @@ Backbone.CompositeView = Backbone.View.extend({
     this.attachSubviewPrepend(selector, subview.render());
   },
 
-  //bad
-  //TODO: fix this, and also figure out why it was working earlier
   addSubviewReplacement: function (selector, subview) {
     this.subviews(selector).forEach(function( subview2 ){
       this.removeSubview(selector, subview2);
@@ -69,8 +67,6 @@ Backbone.CompositeView = Backbone.View.extend({
     subviews.splice(subviews.indexOf(subview), 1);
   },
 
-  //bad
-  //TODO: fix this
   replaceSubview: function (selector, subview) {
     this.$(selector).html(subview.$el);
 
