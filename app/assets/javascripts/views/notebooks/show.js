@@ -24,10 +24,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   onRender: function(){
-    //TODO: ALSO NEED TO overwrite 'remove' and explicitly
-    //unsubscribe from this event otherwise we will have extra events firing
-    //which is bad and not subtle and ZOMBIE VIEWS!
-    // debugger;
     $('.new-note').off();
     $('.new-note').click(this.addNew.bind(this));
   },
@@ -51,7 +47,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
   },
 
   addNoteIndexItem: function(indexItem) {
-    // debugger;
     this.selectFirst();
     var noteIndexItem = new Evernote.Views.NotesIndexItem({
       model: indexItem,
@@ -79,12 +74,6 @@ Evernote.Views.NotebooksShow = Backbone.CompositeView.extend({
       notebook_id: this.model.id
     });
     var notebook = Evernote.Collections.notebooks.get(this.model.id);
-    // var newIndexItem = new Evernote.Views.NotebooksIndexItem({
-    //   model: blankIndexItem,
-    //   parent: this
-    // });
-    // this.addNoteIndexItem(newNote);
-    // notebook.create(newNote, {});
     newNote.save({}, {
       success: function() {
         notebook.notes().add(newNote);
