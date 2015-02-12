@@ -8,7 +8,6 @@ Evernote.Views.NoteHeader = Backbone.View.extend({
 
   render: function() {
     var offset = new Date().getTimezoneOffset() / 60;
-    // debugger;
     var createdTime = moment(this.model.attributes.created_at, "YYYY MM DD HH:mm:ss").subtract(offset, "hours");
     var updatedTime = moment(this.model.attributes.updated_at, "YYYY MM DD HH:mm:ss").subtract(offset, "hours");
     var friendlyCreatedAt = createdTime.fromNow();
@@ -36,25 +35,3 @@ Evernote.Views.NoteHeader = Backbone.View.extend({
   }
 });
 
-
-// submit: function(event) {
-//     event.preventDefault();
-//     var view = this;
-//     var params = $(event.currentTarget).serializeJSON();
-//     // var newNote = new Evernote.Models.Note(params["note"]);
-//     this.model.set(params);
-
-//     if (this.model.isNew()) {
-//       this.model.collection.create(this.model, {});
-//     } else {
-//       this.model.save({}, {});
-//     }
-//     // newNote.update({}, {
-//     //   success: function() {
-//     //     console.log("success");
-//     //     view.model.collection.add(newNote);
-//     //     view.render();
-//     //     debugger;
-//     //   },
-//     // });
-//   }
