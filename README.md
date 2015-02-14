@@ -21,7 +21,7 @@ function to avoid excess network requests; you can see the code for that
 * Custom user authentication so that users can only view their own notes/notebooks.
 I <a href="https://github.com/mtdoss/Forevernote/blob/master/app/models/user.rb#L21">overrode the User#password= method</a> to store BCrypt hashes instead of storing plain passwords in the database.
 
-<h1>TO DO:</h1>
+<h2>TO DO:</h2>
 
 * Tags are not yet implemented
 
@@ -31,3 +31,14 @@ I <a href="https://github.com/mtdoss/Forevernote/blob/master/app/models/user.rb#
 
 * Add the ability to password-protect individual notebooks
 
+<h2>Technologies:</h2>
+Forevernote was built using Ruby on Rails 4 with a RESTful API.
+The front-end is built using Backbone.js
+
+<h2>FAQ:</h2>
+> What was the most difficult part about building ForeverNote?
+There were a few things that I found difficult. Making the styling look just like Evernote definitely took a while.
+Setting up all of the nested Backbone subviews on the page was tricky and required me to really pay attention to the organization of my code.
+
+> Why did you do build Forevernote?
+I wanted to hone my front-end development skills. I use Evernote a lot and thought that making a clone of it would be a great way to practice my skills while also allowing me to see how a really useful website works under the hood.
