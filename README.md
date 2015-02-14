@@ -1,4 +1,5 @@
-Check out the site <a href="forevernote.herokuapp.com">here!</a>
+<h1><a href="forevernote.mtdoss.com">Forevernote</a></h1>
+Check out the site <a href="forevernote.mtdoss.com">here!</a>
 
 This is an application modeled after Evernote. It is almost entirely a one-page
 application, built using Backbone.js. Here are some notable features:
@@ -20,7 +21,7 @@ function to avoid excess network requests; you can see the code for that
 * Custom user authentication so that users can only view their own notes/notebooks.
 I <a href="https://github.com/mtdoss/Forevernote/blob/master/app/models/user.rb#L21">overrode the User#password= method</a> to store BCrypt hashes instead of storing plain passwords in the database.
 
-There are still some important things TO DO:
+<h1>TO DO:</h1>
 
 * Tags are not yet implemented
 
