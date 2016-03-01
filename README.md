@@ -1,5 +1,5 @@
-<h1><a href="forevernote.mtdoss.com">Forevernote</a></h1>
-Check out the site <a href="forevernote.mtdoss.com">here!</a>
+<h1><a href="http://forevernote.mtdoss.com">Forevernote</a></h1>
+Check out the site <a href="http://forevernote.mtdoss.com">here!</a>
 
 This is an application modeled after Evernote. It is almost entirely a one-page
 application, built using Backbone.js. Here are some notable features:
