@@ -26,17 +26,15 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
     this.addSubview('.note-header', headerItem);
   },
 
-  throttledSubmit: function(event) {
+  throttledSubmit: function() {
     var timer  = null;
-    document.getElementById("note-body").onkeyup = function() {
-      if (timer) {
-        window.clearTimeout(timer);
-      }
-      timer = window.setTimeout( function() {
-        timer = null;
-        $("#commit-edit").click();
-      }, 500);
-    };
+    if (timer) {
+      window.clearTimeout(timer);
+    }
+    timer = window.setTimeout( function() {
+      timer = null;
+      $("#commit-edit").click();
+    }, 500);
   },
 
   submit: function(event) {
@@ -44,6 +42,7 @@ Evernote.Views.NotesNew = Backbone.CompositeView.extend({
     var view = this;
     var params = $(event.currentTarget).serializeJSON();
     this.model.set(params);
+    debugger
 
     if (this.model.isNew()) {
       this.model.collection.create(this.model, {});
