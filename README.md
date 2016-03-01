@@ -47,4 +47,4 @@ I wanted to hone my front-end development skills. I use Evernote a lot and thoug
 
 > What are you working on right now?
 
-Right now I am working on learning Angular.js; expect a Minesweeper game and a To-Do app written in Angular in the near future!
+Right now I am really interested in [Elixir](http://elixir-lang.org/) and the [Phoenix framework](http://www.phoenixframework.org/) so I have been working on some small projects with those technologies.
